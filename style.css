@@ -12,6 +12,18 @@
 body{
     background-color: #11071F;
 }
+.loading{
+    position: fixed;
+    z-index: 99;
+    background-color: #7127BA;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.loading img{
+    height: 200px;
+}
 .wrapper{
     max-width: 1440px;
     margin: auto;
