@@ -39,7 +39,7 @@ body{
 .bar{
     position: relative;
     width: 30px;
-    height: 3px;
+    height: 2px;
     background-color: white;
     transition: 0.2s linear width; 
 }
@@ -48,20 +48,20 @@ body{
     content: '';
     position: absolute;
     width: 40px;
-    height: 3px;
+    height: 2px;
     left: 0;
     background-color: white;
-    transform: translateY(-10px) rotate(0);
+    transform: translateY(-8px) rotate(0);
     transition: 0.2s linear;
 }
 .bar::after{
     content: '';
     position: absolute;
     width: 40px;
-    height: 3px;
+    height: 2px;
     left: 0;
     background-color: white;
-    transform: translateY(10px) rotate(0);
+    transform: translateY(8px) rotate(0);
     transition: 0.2s linear;
 }
 
@@ -556,6 +556,9 @@ font-family: 'Poppins', sans-serif;
 }
 
 @media (max-width: 768px){
+    .logo img{
+        height: 50px;
+    }
     #about{
         text-align: center;
     }
