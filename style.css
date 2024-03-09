@@ -29,14 +29,14 @@ body{
     margin: auto;
 }
 
-.toggle{
+#toggle{
     display: none;
     width: 50px;
     height: 50px;
     align-items: center;
 }
 
-.bar{
+#bar{
     position: relative;
     width: 30px;
     height: 2px;
@@ -44,7 +44,7 @@ body{
     transition: 0.2s linear width; 
 }
 
-.bar::before{
+#bar::before{
     content: '';
     position: absolute;
     width: 40px;
@@ -54,7 +54,7 @@ body{
     transform: translateY(-8px) rotate(0);
     transition: 0.2s linear;
 }
-.bar::after{
+#bar::after{
     content: '';
     position: absolute;
     width: 40px;
@@ -65,15 +65,15 @@ body{
     transition: 0.2s linear;
 }
 
-.bar.clicked{
+#bar.clicked{
     width: 0%;
 }
 
-.bar.clicked::after{
+#bar.clicked::after{
     transform: rotate(45deg) translateY(0);
     left: 0;
 }
-.bar.clicked::before{
+#bar.clicked::before{
     transform: rotate(-45deg) translateY(0);
     left: 0;
 }
@@ -87,7 +87,7 @@ body{
     height: 100svh;
 }
 
-.navbar{
+#navbar{
     width: 100%;
     height: auto;
     background-color: #1A0B2E;
@@ -99,12 +99,13 @@ body{
     position: -webkit-sticky;
     top: 0;
     z-index: 999999;
+    left: 0;
 }
 /* .navbar.clicked{
     align-items: flex-start;
 } */
 
-.navbar.clicked .list{
+#navbar.clicked .list{
     display: flex;
 }
 
@@ -375,6 +376,7 @@ font-family: 'Poppins', sans-serif;
     position: relative;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: space-between;
 }
 
 .skill-card img{
@@ -570,7 +572,7 @@ font-family: 'Poppins', sans-serif;
         text-align: center;
     }
 
-    .toggle{
+    #toggle{
         display: flex;
     }
     .list{
@@ -580,7 +582,7 @@ font-family: 'Poppins', sans-serif;
         flex-direction: column;
         margin-top: 6rem;
     }
-    .navbar{
+    #navbar{
         align-items: flex-start;
     }
     .container{

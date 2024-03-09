@@ -17,7 +17,7 @@
         <img src="images/loading.webp" alt="">
     </div>
     <div class="wrapper">
-        <div class="navbar container">
+        <div class="container" id="navbar">
             <div class="logo">
                 <img src="images/log.png" alt="">
             </div>
@@ -37,8 +37,8 @@
                     </li>
                 </ul>
             </div>
-            <div class="toggle">
-                <span class="bar"></span>
+            <div id="toggle">
+                <span id="bar"></span>
             </div>
         </div>
         <section id="hero">
@@ -186,11 +186,20 @@
         window.addEventListener("load", () => {
             document.querySelector(".loading").style.display = "none";
         })
-        const toggle = document.querySelector('.toggle');
-        toggle.addEventListener('click', () => {
-            document.querySelector('.bar').classList.toggle('clicked')
-            document.querySelector('.navbar').classList.toggle('clicked')
+        document.addEventListener("click", (e) => {
+            if (e.target.id !== 'navbar' && e.target.id !== 'bar' && e.target.id !== 'toggle') {
+                document.querySelector('.container').classList.remove('clicked');
+                document.querySelector('#bar').classList.remove('clicked');
+                console.log(e.target.id + "Checking")
+            }
+            console.log(e.target.id + "Please check ji")
         })
+        const toggle = document.querySelector('#toggle');
+        toggle.addEventListener('click', () => {
+            document.querySelector('#bar').classList.toggle('clicked')
+            document.querySelector('.container').classList.toggle('clicked')
+        })
+
     </script>
 </body>
 
